@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "My first weeks in MDS\n\n\n\n\n\n\n\n\nSep 9, 2026\n\n\nJaeda Yurkiw\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jaeda Yurkiw",
+    "section": "",
+    "text": "I’m Jaeda, an EIT (Engineer-in-Training) who graduated from civil engineering at UBC Okanagan this past June. During my degree, I worked in the Construction Integration and Digitalization Lab under Dr. Qian Chen.\nIn my fourth year, I proposed and led a capstone project called BIM-AI Smart Construction, which won first place in Software and Data Systems, an experience that sparked my interest in data science.\nI’m now pursuing a Master of Data Science at UBC, and I’m excited to explore where the intersection of civil engineering and data science can take me, whether that’s in intelligent infrastructure, AI-driven systems, or something I haven’t discovered yet."
+  },
+  {
+    "objectID": "posts/first-weeks/index.html",
+    "href": "posts/first-weeks/index.html",
+    "title": "My first weeks in MDS",
+    "section": "",
+    "text": "My first few weeks in the MDS have been exciting, rewarding, and definitely challenging! I knew the program would be fast-paced, but experiencing it firsthand has been an adjustment. Orientation week was a great way to begin the program. I really enjoyed getting to know my classmates and learning more about what to expect from the year ahead.\nThe first few weeks of classes have been both overwhelming and challenging. Since I don’t come from a coding background, there has been a lot of new material to learn, and I’ve had to put in extra time and effort to build a strong foundation. Although it has been challenging, it has also been rewarding to see my progress. I’m learning something new every day, and I’m excited to continue building my technical skills throughout the program.\nOne of the things that has surprised me most about the MDS has been how supportive and encouraging the professors and program team are. Compared with my undergraduate experience, where I sometimes felt more on my own, the MDS community has made it clear that they genuinely want students to succeed and are there to support us along the way. I’m grateful to be part of the MDS program and excited to continue developing my skills, learning from my classmates and professors, and seeing where this experience takes me.\n\n\n\nOrientation day on campus."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -26,12 +47,5 @@
     "title": "About",
     "section": "Outside of data science",
     "text": "Outside of data science\nOutside of data science, I love staying active. I’ve played high-level indoor and beach volleyball for most of my life, making it my favourite sport to play. I also enjoy road biking and running, and I love spending time outdoors with friends and family.\nI’ve also always enjoyed music and started playing piano at a young age. More recently, I’ve enjoyed creating content for my engineering-focused Instagram account, where I share my experiences and interests in engineering and data science and hope to inspire young girls to pursue STEM. On weekends, I’m usually trying a new restaurant, exploring somewhere new, or spending time with friends and family."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jaeda Yurkiw",
-    "section": "",
-    "text": "I’m Jaeda, an EIT (Engineer-in-Training) who graduated from civil engineering at UBC Okanagan this past June. During my degree, I worked in the Construction Integration and Digitalization Lab under Dr. Qian Chen.\nIn my fourth year, I proposed and led a capstone project called BIM-AI Smart Construction, which won first place in Software and Data Systems, an experience that sparked my interest in data science.\nI’m now pursuing a Master of Data Science at UBC, and I’m excited to explore where the intersection of civil engineering and data science can take me, whether that’s in intelligent infrastructure, AI-driven systems, or something I haven’t discovered yet."
   }
 ]
