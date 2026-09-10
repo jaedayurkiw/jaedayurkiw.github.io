@@ -1,7 +1,12 @@
 ---
 title: "Jaeda Yurkiw"
+about:
+  template: jolla
+  image: images/profile.jpg
 ---
 
-This is a Quarto website.
+I'm Jaeda, an EIT (Engineer-in-Training) who graduated from civil engineering at UBC Okanagan this past June. During my degree, I worked in the Construction Integration and Digitalization Lab under Dr. Qian Chen.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+In my fourth year, I proposed and led a capstone project called BIM-AI Smart Construction, which won first place in Software and Data Systems, an experience that sparked my interest in data science. 
+
+I'm now pursuing a Master of Data Science at UBC, and I'm excited to explore where the intersection of civil engineering and data science can take me, whether that's in intelligent infrastructure, AI-driven systems, or something I haven't discovered yet.

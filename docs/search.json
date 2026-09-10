@@ -4,13 +4,34 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "I grew up in Kelowna, British Columbia, and attended Aberdeen Hall Preparatory School. From there, I went on to UBC Okanagan, where I completed an undergraduate degree in civil engineering and am now working toward becoming a licensed engineer as an EIT. Throughout my degree, I gained hands-on experience through engineering internships with Emil Anderson Group and ROV Engineering Consultants."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "",
+    "text": "I grew up in Kelowna, British Columbia, and attended Aberdeen Hall Preparatory School. From there, I went on to UBC Okanagan, where I completed an undergraduate degree in civil engineering and am now working toward becoming a licensed engineer as an EIT. Throughout my degree, I gained hands-on experience through engineering internships with Emil Anderson Group and ROV Engineering Consultants."
+  },
+  {
+    "objectID": "about.html#why-data-science",
+    "href": "about.html#why-data-science",
+    "title": "About",
+    "section": "Why data science",
+    "text": "Why data science\nMy interest in data science and artificial intelligence grew after joining the Construction Integration and Digitalization (CID) Lab at UBC Okanagan, where I saw how these tools could solve real problems in construction and structural engineering. Through two engineering internships, I noticed how many structural workflows still relied on slow, manual processes, pushing me to look beyond traditional engineering toward integrated, data-centric systems.\nThis led me to propose BIM-AI Smart Construction as my capstone project with my research supervisor, which won first place in Software and Data Systems and ultimately inspired me to pursue a Master of Data Science."
+  },
+  {
+    "objectID": "about.html#outside-of-data-science",
+    "href": "about.html#outside-of-data-science",
+    "title": "About",
+    "section": "Outside of data science",
+    "text": "Outside of data science\nOutside of data science, I love staying active. I’ve played high-level indoor and beach volleyball for most of my life, making it my favourite sport to play. I also enjoy road biking and running, and I love spending time outdoors with friends and family.\nI’ve also always enjoyed music and started playing piano at a young age. More recently, I’ve enjoyed creating content for my engineering-focused Instagram account, where I share my experiences and interests in engineering and data science and hope to inspire young girls to pursue STEM. On weekends, I’m usually trying a new restaurant, exploring somewhere new, or spending time with friends and family."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Jaeda Yurkiw",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "I’m Jaeda, an EIT (Engineer-in-Training) who graduated from civil engineering at UBC Okanagan this past June. During my degree, I worked in the Construction Integration and Digitalization Lab under Dr. Qian Chen.\nIn my fourth year, I proposed and led a capstone project called BIM-AI Smart Construction, which won first place in Software and Data Systems, an experience that sparked my interest in data science.\nI’m now pursuing a Master of Data Science at UBC, and I’m excited to explore where the intersection of civil engineering and data science can take me, whether that’s in intelligent infrastructure, AI-driven systems, or something I haven’t discovered yet."
   }
 ]

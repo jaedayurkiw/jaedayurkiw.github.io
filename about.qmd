@@ -2,4 +2,18 @@
 title: "About"
 ---
 
-About this site
+## Background
+
+I grew up in Kelowna, British Columbia, and attended Aberdeen Hall Preparatory School. From there, I went on to UBC Okanagan, where I completed an undergraduate degree in civil engineering and am now working toward becoming a licensed engineer as an EIT. Throughout my degree, I gained hands-on experience through engineering internships with Emil Anderson Group and ROV Engineering Consultants.
+
+## Why data science
+
+My interest in data science and artificial intelligence grew after joining the Construction Integration and Digitalization (CID) Lab at UBC Okanagan, where I saw how these tools could solve real problems in construction and structural engineering. Through two engineering internships, I noticed how many structural workflows still relied on slow, manual processes, pushing me to look beyond traditional engineering toward integrated, data-centric systems.
+
+This led me to propose BIM-AI Smart Construction as my capstone project with my research supervisor, which won first place in Software and Data Systems and ultimately inspired me to pursue a Master of Data Science.
+
+## Outside of data science
+
+Outside of data science, I love staying active. I’ve played high-level indoor and beach volleyball for most of my life, making it my favourite sport to play. I also enjoy road biking and running, and I love spending time outdoors with friends and family.
+
+I’ve also always enjoyed music and started playing piano at a young age. More recently, I’ve enjoyed creating content for my engineering-focused Instagram account, where I share my experiences and interests in engineering and data science and hope to inspire young girls to pursue STEM. On weekends, I’m usually trying a new restaurant, exploring somewhere new, or spending time with friends and family.
