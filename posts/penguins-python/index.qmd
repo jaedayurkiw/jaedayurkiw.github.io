@@ -1,0 +1,68 @@
+---
+title: "Body mass of Adelie penguin species"
+author: "Jaeda Yurkiw"
+date: 2026-09-23
+---
+
+In this post I use Python to explore the body mass of Adelie penguins.
+
+Data: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/),
+Palmer Station Antarctica LTER, collected by Dr. Kristen Gorman.
+Released under the CC0 licence.
+
+## Setup
+
+```{python}
+#| label: setup
+#| message: false
+#| warning: false
+import sys
+import pandas as pd
+import matplotlib.pyplot as plt
+from palmerpenguins import load_penguins
+
+print(sys.executable)
+```
+
+## Removing missing body mass values
+
+```{python}
+penguins = load_penguins()
+penguins = penguins.dropna(subset=["body_mass_g"])
+penguins.head()
+```
+
+
+## Body mass only for species Adelie 
+
+```{python}
+adelie_body_mass = penguins.loc[penguins["species"] == "Adelie", "body_mass_g"]
+adelie_body_mass.head()
+```
+
+
+## Body mass in descending order 
+
+```{python}
+penguins_body_mass_desc = adelie_body_mass.sort_values(ascending = False)
+penguins_body_mass_desc.head()
+```
+
+## Visualizing body mass for Adelie
+
+```{python}
+#| label: fig-adelie-body-mass
+#| fig-cap: "Distribution of body mass for Adelie penguins."
+fig, ax = plt.subplots()
+ax.hist(adelie_body_mass, bins=15, edgecolor="white")
+ax.set_xlabel("Body mass (g)")
+ax.set_ylabel("Number of penguins")
+plt.show()
+```
+
+## What I did and what I found 
+
+I first removed rows with missing body mass values, then filtered the data to include only Adelie penguins. Next, I sorted their body masses in descending order to see the heaviest and lightest penguins, and finally plotted the distribution as a histogram.
+
+The heaviest Adelie penguin weighs 4,775 g and the lightest weighs 2,850 g. The most common body mass range is about 3,880 to 4,000 g, which contains 18 penguins. 
+The fewest penguins (2) weigh about 4,520 to 4,650 g. Overall, @fig-adelie-body-mass shows that most Adelie penguins weigh between about 3,250 g and 4,000 g.
