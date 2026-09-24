@@ -4,7 +4,7 @@ author: "Jaeda Yurkiw"
 date: 2026-09-23
 ---
 
-In this post I use R to explore how life in Iran changed between 1952 and 2007.
+In this post I use R to explore how life expectancy in Iran changed between 1952 and 2007.
 
 Data: [gapminder R package](https://cran.r-project.org/package=gapminder)
 by Jennifer Bryan (CC0), an excerpt of data from the
@@ -21,7 +21,7 @@ library(dplyr)
 library(ggplot2)
 ```
 
-## Removing missing life expentancy values
+## Removing missing life expectancy values
 
 ```{r}
 countries <- gapminder |>
@@ -64,3 +64,4 @@ ggplot(iran_life_exp, aes(x = year, y = lifeExp)) +
 I first removed rows with missing life expectancy values, then filtered the data to include only Iran. Next, I sorted the years by life expectancy in descending order to see the highest and lowest, and finally plotted life expectancy over time as a line chart.
 
 Life expectancy in Iran increased steadily from 1952 to 2007. In 1952, life expectancy was around 50 years, and by 2007 it had risen to around 72 years, an increase of about 22 years (@fig-iran-life-exp).
+

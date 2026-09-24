@@ -18,7 +18,7 @@
     "href": "posts/gapminder-r/index.html",
     "title": "Life expectancy in Iran over time",
     "section": "",
-    "text": "In this post I use R to explore how life in Iran changed between 1952 and 2007.\nData: gapminder R package by Jennifer Bryan (CC0), an excerpt of data from the Gapminder Foundation (CC BY 4.0)."
+    "text": "In this post I use R to explore how life expectancy in Iran changed between 1952 and 2007.\nData: gapminder R package by Jennifer Bryan (CC0), an excerpt of data from the Gapminder Foundation (CC BY 4.0)."
   },
   {
     "objectID": "posts/gapminder-r/index.html#setup",
@@ -28,11 +28,11 @@
     "text": "Setup\n\nlibrary(gapminder)\nlibrary(dplyr)\nlibrary(ggplot2)"
   },
   {
-    "objectID": "posts/gapminder-r/index.html#removing-missing-life-expentancy-values",
-    "href": "posts/gapminder-r/index.html#removing-missing-life-expentancy-values",
+    "objectID": "posts/gapminder-r/index.html#removing-missing-life-expectancy-values",
+    "href": "posts/gapminder-r/index.html#removing-missing-life-expectancy-values",
     "title": "Life expectancy in Iran over time",
-    "section": "Removing missing life expentancy values",
-    "text": "Removing missing life expentancy values\n\ncountries &lt;- gapminder |&gt;\n    filter(!is.na(lifeExp))\nhead(countries)\n\n# A tibble: 6 × 6\n  country     continent  year lifeExp      pop gdpPercap\n  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8425333      779.\n2 Afghanistan Asia       1957    30.3  9240934      821.\n3 Afghanistan Asia       1962    32.0 10267083      853.\n4 Afghanistan Asia       1967    34.0 11537966      836.\n5 Afghanistan Asia       1972    36.1 13079460      740.\n6 Afghanistan Asia       1977    38.4 14880372      786."
+    "section": "Removing missing life expectancy values",
+    "text": "Removing missing life expectancy values\n\ncountries &lt;- gapminder |&gt;\n    filter(!is.na(lifeExp))\nhead(countries)\n\n# A tibble: 6 × 6\n  country     continent  year lifeExp      pop gdpPercap\n  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8425333      779.\n2 Afghanistan Asia       1957    30.3  9240934      821.\n3 Afghanistan Asia       1962    32.0 10267083      853.\n4 Afghanistan Asia       1967    34.0 11537966      836.\n5 Afghanistan Asia       1972    36.1 13079460      740.\n6 Afghanistan Asia       1977    38.4 14880372      786."
   },
   {
     "objectID": "posts/gapminder-r/index.html#life-expectancy-for-iran",

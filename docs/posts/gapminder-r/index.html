@@ -161,7 +161,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#setup" id="toc-setup" class="nav-link active" data-scroll-target="#setup">Setup</a></li>
-  <li><a href="#removing-missing-life-expentancy-values" id="toc-removing-missing-life-expentancy-values" class="nav-link" data-scroll-target="#removing-missing-life-expentancy-values">Removing missing life expentancy values</a></li>
+  <li><a href="#removing-missing-life-expectancy-values" id="toc-removing-missing-life-expectancy-values" class="nav-link" data-scroll-target="#removing-missing-life-expectancy-values">Removing missing life expectancy values</a></li>
   <li><a href="#life-expectancy-for-iran" id="toc-life-expectancy-for-iran" class="nav-link" data-scroll-target="#life-expectancy-for-iran">Life expectancy for Iran</a></li>
   <li><a href="#life-expectancy-in-descending-order" id="toc-life-expectancy-in-descending-order" class="nav-link" data-scroll-target="#life-expectancy-in-descending-order">Life expectancy in descending order</a></li>
   <li><a href="#visualizing-life-expectancy-for-iran" id="toc-visualizing-life-expectancy-for-iran" class="nav-link" data-scroll-target="#visualizing-life-expectancy-for-iran">Visualizing life expectancy for Iran</a></li>
@@ -203,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>In this post I use R to explore how life in Iran changed between 1952 and 2007.</p>
+<p>In this post I use R to explore how life expectancy in Iran changed between 1952 and 2007.</p>
 <p>Data: <a href="https://cran.r-project.org/package=gapminder">gapminder R package</a> by Jennifer Bryan (CC0), an excerpt of data from the <a href="https://www.gapminder.org/data/">Gapminder Foundation</a> (CC BY 4.0).</p>
 <section id="setup" class="level2">
 <h2 class="anchored" data-anchor-id="setup">Setup</h2>
@@ -213,8 +213,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="removing-missing-life-expentancy-values" class="level2">
-<h2 class="anchored" data-anchor-id="removing-missing-life-expentancy-values">Removing missing life expentancy values</h2>
+<section id="removing-missing-life-expectancy-values" class="level2">
+<h2 class="anchored" data-anchor-id="removing-missing-life-expectancy-values">Removing missing life expectancy values</h2>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>countries <span class="ot">&lt;-</span> gapminder <span class="sc">|&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(lifeExp))</span>

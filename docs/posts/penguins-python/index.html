@@ -224,7 +224,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="removing-missing-body-mass-values" class="level2">
 <h2 class="anchored" data-anchor-id="removing-missing-body-mass-values">Removing missing body mass values</h2>
-<div id="3e8c9c89" class="cell" data-execution_count="2">
+<div id="050ea0c6" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> load_penguins()</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> penguins.dropna(subset<span class="op">=</span>[<span class="st">"body_mass_g"</span>])</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>penguins.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -311,7 +311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="body-mass-only-for-species-adelie" class="level2">
 <h2 class="anchored" data-anchor-id="body-mass-only-for-species-adelie">Body mass only for species Adelie</h2>
-<div id="41f9a981" class="cell" data-execution_count="3">
+<div id="c2d51aff" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>adelie_body_mass <span class="op">=</span> penguins.loc[penguins[<span class="st">"species"</span>] <span class="op">==</span> <span class="st">"Adelie"</span>, <span class="st">"body_mass_g"</span>]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>adelie_body_mass.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -326,7 +326,7 @@ Name: body_mass_g, dtype: float64</code></pre>
 </section>
 <section id="body-mass-in-descending-order" class="level2">
 <h2 class="anchored" data-anchor-id="body-mass-in-descending-order">Body mass in descending order</h2>
-<div id="1b0ea887" class="cell" data-execution_count="4">
+<div id="a75e87c5" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>penguins_body_mass_desc <span class="op">=</span> adelie_body_mass.sort_values(ascending <span class="op">=</span> <span class="va">False</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>penguins_body_mass_desc.head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
