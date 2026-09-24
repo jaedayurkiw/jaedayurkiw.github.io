@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "My first weeks in MDS\n\n\n\n\n\n\n\n\nSep 9, 2026\n\n\nJaeda Yurkiw\n\n\n\n\n\nNo matching items"
+    "text": "Life expectancy in Iran over time\n\n\n\n\n\n\n\n\nSep 23, 2026\n\n\nJaeda Yurkiw\n\n\n\n\n\n\n\n\n\n\n\n\nBody mass of Adelie penguin species\n\n\n\n\n\n\n\n\nSep 23, 2026\n\n\nJaeda Yurkiw\n\n\n\n\n\n\n\n\n\n\n\n\nMy first weeks in MDS\n\n\n\n\n\n\n\n\nSep 9, 2026\n\n\nJaeda Yurkiw\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -14,11 +14,109 @@
     "text": "I’m Jaeda, an EIT (Engineer-in-Training) who graduated from civil engineering at UBC Okanagan this past June. During my degree, I worked in the Construction Integration and Digitalization Lab under Dr. Qian Chen.\nIn my fourth year, I proposed and led a capstone project called BIM-AI Smart Construction, which won first place in Software and Data Systems, an experience that sparked my interest in data science.\nI’m now pursuing a Master of Data Science at UBC, and I’m excited to explore where the intersection of civil engineering and data science can take me, whether that’s in intelligent infrastructure, AI-driven systems, or something I haven’t discovered yet."
   },
   {
+    "objectID": "posts/gapminder-r/index.html",
+    "href": "posts/gapminder-r/index.html",
+    "title": "Life expectancy in Iran over time",
+    "section": "",
+    "text": "In this post I use R to explore how life in Iran changed between 1952 and 2007.\nData: gapminder R package by Jennifer Bryan (CC0), an excerpt of data from the Gapminder Foundation (CC BY 4.0)."
+  },
+  {
+    "objectID": "posts/gapminder-r/index.html#setup",
+    "href": "posts/gapminder-r/index.html#setup",
+    "title": "Life expectancy in Iran over time",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(gapminder)\nlibrary(dplyr)\nlibrary(ggplot2)"
+  },
+  {
+    "objectID": "posts/gapminder-r/index.html#removing-missing-life-expentancy-values",
+    "href": "posts/gapminder-r/index.html#removing-missing-life-expentancy-values",
+    "title": "Life expectancy in Iran over time",
+    "section": "Removing missing life expentancy values",
+    "text": "Removing missing life expentancy values\n\ncountries &lt;- gapminder |&gt;\n    filter(!is.na(lifeExp))\nhead(countries)\n\n# A tibble: 6 × 6\n  country     continent  year lifeExp      pop gdpPercap\n  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8425333      779.\n2 Afghanistan Asia       1957    30.3  9240934      821.\n3 Afghanistan Asia       1962    32.0 10267083      853.\n4 Afghanistan Asia       1967    34.0 11537966      836.\n5 Afghanistan Asia       1972    36.1 13079460      740.\n6 Afghanistan Asia       1977    38.4 14880372      786."
+  },
+  {
+    "objectID": "posts/gapminder-r/index.html#life-expectancy-for-iran",
+    "href": "posts/gapminder-r/index.html#life-expectancy-for-iran",
+    "title": "Life expectancy in Iran over time",
+    "section": "Life expectancy for Iran",
+    "text": "Life expectancy for Iran\n\niran_life_exp &lt;- countries |&gt;\n    filter(country == \"Iran\") |&gt;\n    select(year, lifeExp)\nhead(iran_life_exp)\n\n# A tibble: 6 × 2\n   year lifeExp\n  &lt;int&gt;   &lt;dbl&gt;\n1  1952    44.9\n2  1957    47.2\n3  1962    49.3\n4  1967    52.5\n5  1972    55.2\n6  1977    57.7"
+  },
+  {
+    "objectID": "posts/gapminder-r/index.html#life-expectancy-in-descending-order",
+    "href": "posts/gapminder-r/index.html#life-expectancy-in-descending-order",
+    "title": "Life expectancy in Iran over time",
+    "section": "Life expectancy in descending order",
+    "text": "Life expectancy in descending order\n\niran_life_exp_desc &lt;- iran_life_exp |&gt;\n    arrange(desc(lifeExp))\nhead(iran_life_exp_desc)\n\n# A tibble: 6 × 2\n   year lifeExp\n  &lt;int&gt;   &lt;dbl&gt;\n1  2007    71.0\n2  2002    69.5\n3  1997    68.0\n4  1992    65.7\n5  1987    63.0\n6  1982    59.6"
+  },
+  {
+    "objectID": "posts/gapminder-r/index.html#visualizing-life-expectancy-for-iran",
+    "href": "posts/gapminder-r/index.html#visualizing-life-expectancy-for-iran",
+    "title": "Life expectancy in Iran over time",
+    "section": "Visualizing life expectancy for Iran",
+    "text": "Visualizing life expectancy for Iran\n\nggplot(iran_life_exp, aes(x = year, y = lifeExp)) +\n  geom_line() +\n  geom_point() +\n  labs(x = \"Year\", y = \"Life expectancy (years)\")\n\n\n\n\n\n\n\nFigure 1: Life expectancy in Iran, 1952 to 2007."
+  },
+  {
+    "objectID": "posts/gapminder-r/index.html#what-i-did-and-what-i-found",
+    "href": "posts/gapminder-r/index.html#what-i-did-and-what-i-found",
+    "title": "Life expectancy in Iran over time",
+    "section": "What I did and what I found",
+    "text": "What I did and what I found\nI first removed rows with missing life expectancy values, then filtered the data to include only Iran. Next, I sorted the years by life expectancy in descending order to see the highest and lowest, and finally plotted life expectancy over time as a line chart.\nLife expectancy in Iran increased steadily from 1952 to 2007. In 1952, life expectancy was around 50 years, and by 2007 it had risen to around 72 years, an increase of about 22 years (Figure 1)."
+  },
+  {
     "objectID": "posts/first-weeks/index.html",
     "href": "posts/first-weeks/index.html",
     "title": "My first weeks in MDS",
     "section": "",
     "text": "My first few weeks in the MDS have been exciting, rewarding, and definitely challenging! I knew the program would be fast-paced, but experiencing it firsthand has been an adjustment. Orientation week was a great way to begin the program. I really enjoyed getting to know my classmates and learning more about what to expect from the year ahead.\nThe first few weeks of classes have been both overwhelming and challenging. Since I don’t come from a coding background, there has been a lot of new material to learn, and I’ve had to put in extra time and effort to build a strong foundation. Although it has been challenging, it has also been rewarding to see my progress. I’m learning something new every day, and I’m excited to continue building my technical skills throughout the program.\nOne of the things that has surprised me most about the MDS has been how supportive and encouraging the professors and program team are. Compared with my undergraduate experience, where I sometimes felt more on my own, the MDS community has made it clear that they genuinely want students to succeed and are there to support us along the way. I’m grateful to be part of the MDS program and excited to continue developing my skills, learning from my classmates and professors, and seeing where this experience takes me.\n\n\n\nOrientation day on campus."
+  },
+  {
+    "objectID": "posts/penguins-python/index.html",
+    "href": "posts/penguins-python/index.html",
+    "title": "Body mass of Adelie penguin species",
+    "section": "",
+    "text": "In this post I use Python to explore the body mass of Adelie penguins.\nData: Palmer Penguins, Palmer Station Antarctica LTER, collected by Dr. Kristen Gorman. Released under the CC0 licence."
+  },
+  {
+    "objectID": "posts/penguins-python/index.html#setup",
+    "href": "posts/penguins-python/index.html#setup",
+    "title": "Body mass of Adelie penguin species",
+    "section": "Setup",
+    "text": "Setup\n\nimport sys\nimport pandas as pd\nimport matplotlib.pyplot as plt\nfrom palmerpenguins import load_penguins\n\nprint(sys.executable)\n\n/Users/jaeda/Documents/UBC_MDS/DSCI_521/jaedayurkiw.github.io/.venv/bin/python3"
+  },
+  {
+    "objectID": "posts/penguins-python/index.html#removing-missing-body-mass-values",
+    "href": "posts/penguins-python/index.html#removing-missing-body-mass-values",
+    "title": "Body mass of Adelie penguin species",
+    "section": "Removing missing body mass values",
+    "text": "Removing missing body mass values\n\npenguins = load_penguins()\npenguins = penguins.dropna(subset=[\"body_mass_g\"])\npenguins.head()\n\n\n\n\n\n\n\n\nspecies\nisland\nbill_length_mm\nbill_depth_mm\nflipper_length_mm\nbody_mass_g\nsex\nyear\n\n\n\n\n0\nAdelie\nTorgersen\n39.1\n18.7\n181.0\n3750.0\nmale\n2007\n\n\n1\nAdelie\nTorgersen\n39.5\n17.4\n186.0\n3800.0\nfemale\n2007\n\n\n2\nAdelie\nTorgersen\n40.3\n18.0\n195.0\n3250.0\nfemale\n2007\n\n\n4\nAdelie\nTorgersen\n36.7\n19.3\n193.0\n3450.0\nfemale\n2007\n\n\n5\nAdelie\nTorgersen\n39.3\n20.6\n190.0\n3650.0\nmale\n2007"
+  },
+  {
+    "objectID": "posts/penguins-python/index.html#body-mass-only-for-species-adelie",
+    "href": "posts/penguins-python/index.html#body-mass-only-for-species-adelie",
+    "title": "Body mass of Adelie penguin species",
+    "section": "Body mass only for species Adelie",
+    "text": "Body mass only for species Adelie\n\nadelie_body_mass = penguins.loc[penguins[\"species\"] == \"Adelie\", \"body_mass_g\"]\nadelie_body_mass.head()\n\n0    3750.0\n1    3800.0\n2    3250.0\n4    3450.0\n5    3650.0\nName: body_mass_g, dtype: float64"
+  },
+  {
+    "objectID": "posts/penguins-python/index.html#body-mass-in-descending-order",
+    "href": "posts/penguins-python/index.html#body-mass-in-descending-order",
+    "title": "Body mass of Adelie penguin species",
+    "section": "Body mass in descending order",
+    "text": "Body mass in descending order\n\npenguins_body_mass_desc = adelie_body_mass.sort_values(ascending = False)\npenguins_body_mass_desc.head()\n\n109    4775.0\n101    4725.0\n81     4700.0\n7      4675.0\n39     4650.0\nName: body_mass_g, dtype: float64"
+  },
+  {
+    "objectID": "posts/penguins-python/index.html#visualizing-body-mass-for-adelie",
+    "href": "posts/penguins-python/index.html#visualizing-body-mass-for-adelie",
+    "title": "Body mass of Adelie penguin species",
+    "section": "Visualizing body mass for Adelie",
+    "text": "Visualizing body mass for Adelie\n\nfig, ax = plt.subplots()\nax.hist(adelie_body_mass, bins=15, edgecolor=\"white\")\nax.set_xlabel(\"Body mass (g)\")\nax.set_ylabel(\"Number of penguins\")\nplt.show()\n\n\n\n\n\n\n\nFigure 1: Distribution of body mass for Adelie penguins."
+  },
+  {
+    "objectID": "posts/penguins-python/index.html#what-i-did-and-what-i-found",
+    "href": "posts/penguins-python/index.html#what-i-did-and-what-i-found",
+    "title": "Body mass of Adelie penguin species",
+    "section": "What I did and what I found",
+    "text": "What I did and what I found\nI first removed rows with missing body mass values, then filtered the data to include only Adelie penguins. Next, I sorted their body masses in descending order to see the heaviest and lightest penguins, and finally plotted the distribution as a histogram.\nThe heaviest Adelie penguin weighs 4,775 g and the lightest weighs 2,850 g. The most common body mass range is about 3,880 to 4,000 g, which contains 18 penguins. The fewest penguins (2) weigh about 4,520 to 4,650 g. Overall, Figure 1 shows that most Adelie penguins weigh between about 3,250 g and 4,000 g."
   },
   {
     "objectID": "about.html",
